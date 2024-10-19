@@ -3,7 +3,6 @@ const playButton = document.getElementById('playPaus');
 const stopButton = document.getElementById('stop');
 const currentTimeDisplay = document.getElementById('current-time');
 const durationDisplay = document.getElementById('duration');
-const progressBar = document.getElementById('progress-bar');
 const prgBar = document.getElementById('barProgress');
 
 var isPlay = 0;
@@ -15,7 +14,10 @@ audio.addEventListener('loadedmetadata', () => {
 
 audio.addEventListener('timeupdate', () => {
     currentTimeDisplay.textContent = formatTime(audio.currentTime);
-    prgBar.style.width = audio.currentTime
+    prgBar.style.width = (audio.currentTime / audio.duration) * 100
+    if(audio.currentTime == audio.duration){
+        playButton.innerHTML = '<i class="fas fa-play"></i>';
+    }
     // progressBar.value = audio.currentTime;
 });
 
@@ -37,10 +39,6 @@ stopButton.addEventListener('click', () => {
     audio.currentTime = 0;
     currentTimeDisplay.textContent = '0:00';
     progressBar.value = 0;
-});
-
-progressBar.addEventListener('input', () => {
-    audio.currentTime = progressBar.value;
 });
 
 function formatTime(seconds) {
