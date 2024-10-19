@@ -37,8 +37,8 @@ playButton.addEventListener('click', () => {
 stopButton.addEventListener('click', () => {
     audio.pause();
     audio.currentTime = 0;
-    currentTimeDisplay.textContent = '0:00';
-    progressBar.value = 0;
+    currentTimeDisplay.textContent = '00:00';
+    prgBar.style.width = 0;
 });
 
 function formatTime(seconds) {
