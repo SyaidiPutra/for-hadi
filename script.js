@@ -4,6 +4,7 @@ const stopButton = document.getElementById('stop');
 const currentTimeDisplay = document.getElementById('current-time');
 const durationDisplay = document.getElementById('duration');
 const progressBar = document.getElementById('progress-bar');
+const prgBar = document.getElementById('barProgress');
 
 var isPlay = 0;
 
@@ -14,14 +15,19 @@ audio.addEventListener('loadedmetadata', () => {
 
 audio.addEventListener('timeupdate', () => {
     currentTimeDisplay.textContent = formatTime(audio.currentTime);
-    progressBar.value = audio.currentTime;
+    // progressBar.value = audio.currentTime;
+    prgBar.style.width = audio.currentTime
 });
 
 playButton.addEventListener('click', () => {
     if(isPlay == 0){
         audio.play();
+        isPlay = 1
+        document.getSelection('#playPaus>.fa-solid').classList.replace('fa-play', 'fa-pause')
     }else{
         audio.pause();
+        isPlay = 0
+        document.getSelection('#playPaus>.fa-solid').classList.replace('fa-pause', 'fa-play')
     }
 });
 
