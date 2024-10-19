@@ -165,6 +165,29 @@ body * {
     padding-top: 9.6px;
 }
 
+
+/* Mengatur lebar scrollbar */
+.scroll-beauty::-webkit-scrollbar {
+    width: 8px; /* Lebar untuk scrollbar vertikal */
+}
+
+/* Mengatur tampilan track scrollbar */
+.scroll-beauty::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Warna latar belakang track */
+    border-radius: 10px; /* Membuat sudut menjadi bulat */
+}
+
+/* Mengatur tampilan thumb scrollbar */
+.scroll-beauty::-webkit-scrollbar-thumb {
+    background: #888; /* Warna thumb */
+    border-radius: 10px; /* Membuat sudut menjadi bulat */
+}
+
+/* Mengatur tampilan thumb saat hover */
+.scroll-beauty::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Warna thumb saat hover */
+}
+
 @media (max-width: 670px) {
     #boxes {
         display: flex;
