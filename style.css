@@ -7,6 +7,7 @@
 }
 
 body {
+    background-position-x: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("https://momenbahagia.id/wp-content/uploads/2024/10/3-12.jpg");
@@ -73,7 +74,7 @@ body * {
 }
 
 .player {
-    background-color: #080747;
+    background-color: #08074790;
     padding: 28px;
     border-radius: 20px;
 }
