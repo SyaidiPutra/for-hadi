@@ -169,6 +169,7 @@ body * {
 /* Mengatur lebar scrollbar */
 .scroll-beauty::-webkit-scrollbar {
     width: 8px; /* Lebar untuk scrollbar vertikal */
+    margin-left: -10px; /* Menggeser scrollbar ke kiri */
 }
 
 /* Mengatur tampilan track scrollbar */
@@ -187,6 +188,7 @@ body * {
 .scroll-beauty::-webkit-scrollbar-thumb:hover {
     background: #555; /* Warna thumb saat hover */
 }
+
 
 @media (max-width: 670px) {
     #boxes {
