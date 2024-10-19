@@ -15,7 +15,7 @@ audio.addEventListener('loadedmetadata', () => {
 audio.addEventListener('timeupdate', () => {
     currentTimeDisplay.textContent = formatTime(audio.currentTime);
     prgBar.style.width = (audio.currentTime / audio.duration) * 100 + '%'
-    if(audio.currentTime == audio.duration){
+    if((audio.currentTime / audio.duration) > 99){
         playButton.innerHTML = '<i class="fas fa-play"></i>';
     }
     // progressBar.value = audio.currentTime;
