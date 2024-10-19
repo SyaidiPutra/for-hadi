@@ -1,10 +1,11 @@
 const audio = document.getElementById('audio');
-const playButton = document.getElementById('play');
-const pauseButton = document.getElementById('pause');
+const playButton = document.getElementById('playPaus');
 const stopButton = document.getElementById('stop');
 const currentTimeDisplay = document.getElementById('current-time');
 const durationDisplay = document.getElementById('duration');
 const progressBar = document.getElementById('progress-bar');
+
+var isPlay = 0;
 
 audio.addEventListener('loadedmetadata', () => {
     durationDisplay.textContent = formatTime(audio.duration);
@@ -17,12 +18,13 @@ audio.addEventListener('timeupdate', () => {
 });
 
 playButton.addEventListener('click', () => {
-    audio.play();
+    if(isPlay == 0){
+        audio.play();
+    }else{
+        audio.pause();
+    }
 });
 
-pauseButton.addEventListener('click', () => {
-    audio.pause();
-});
 
 stopButton.addEventListener('click', () => {
     audio.pause();
