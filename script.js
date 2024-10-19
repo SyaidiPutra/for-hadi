@@ -23,11 +23,11 @@ playButton.addEventListener('click', () => {
     if(isPlay == 0){
         audio.play();
         isPlay = 1
-        togglePlayButton.innerHTML = '<i class="fas fa-pause"></i>';
+        playButton.innerHTML = '<i class="fas fa-pause"></i>';
     }else{
         audio.pause();
         isPlay = 0
-        togglePlayButton.innerHTML = '<i class="fas fa-play"></i>';
+        playButton.innerHTML = '<i class="fas fa-play"></i>';
     }
 });
 
