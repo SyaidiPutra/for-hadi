@@ -38,7 +38,7 @@ stopButton.addEventListener('click', () => {
     audio.pause();
     playButton.innerHTML = '<i class="fas fa-play"></i>';
     audio.currentTime = 0;
-    currentTimeDisplay.textContent = '00:00';
+    currentTimeDisplay.textContent = '0:00';
     prgBar.style.width = 0;
 });
 
