@@ -14,7 +14,7 @@ audio.addEventListener('loadedmetadata', () => {
 
 audio.addEventListener('timeupdate', () => {
     currentTimeDisplay.textContent = formatTime(audio.currentTime);
-    prgBar.style.width = (audio.currentTime / audio.duration) * 100
+    prgBar.style.width = (audio.currentTime / audio.duration) * 100 + '%'
     if(audio.currentTime == audio.duration){
         playButton.innerHTML = '<i class="fas fa-play"></i>';
     }
