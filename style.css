@@ -168,8 +168,9 @@ body * {
 
 /* Mengatur lebar scrollbar */
 .scroll-beauty::-webkit-scrollbar {
+    display: none;
     width: 8px; /* Lebar untuk scrollbar vertikal */
-    margin-left: -10px; /* Menggeser scrollbar ke kiri */
+    margin-left: -100px; /* Menggeser scrollbar ke kiri */
 }
 
 /* Mengatur tampilan track scrollbar */
