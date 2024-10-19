@@ -63,6 +63,8 @@ body * {
 #player02 {
     grid-area: B;
     height: fit-content;
+    max-height: 20vh;
+    overflow: auto;
 }
 
 #player02 .controls {
