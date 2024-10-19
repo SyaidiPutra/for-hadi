@@ -15,19 +15,19 @@ audio.addEventListener('loadedmetadata', () => {
 
 audio.addEventListener('timeupdate', () => {
     currentTimeDisplay.textContent = formatTime(audio.currentTime);
-    // progressBar.value = audio.currentTime;
     prgBar.style.width = audio.currentTime
+    // progressBar.value = audio.currentTime;
 });
 
 playButton.addEventListener('click', () => {
     if(isPlay == 0){
         audio.play();
         isPlay = 1
-        document.getSelection('#playPaus>.fa-solid').classList.replace('fa-play', 'fa-pause')
+        togglePlayButton.innerHTML = '<i class="fas fa-pause"></i>';
     }else{
         audio.pause();
         isPlay = 0
-        document.getSelection('#playPaus>.fa-solid').classList.replace('fa-pause', 'fa-play')
+        togglePlayButton.innerHTML = '<i class="fas fa-play"></i>';
     }
 });
 
