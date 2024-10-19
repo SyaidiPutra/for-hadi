@@ -7,11 +7,17 @@
 }
 
 body {
-    background-position-x: center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("https://momenbahagia.id/wp-content/uploads/2024/10/3-12.jpg");
 
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
 }
 
 body * {
@@ -62,6 +68,10 @@ body * {
 #player02 .controls {
     display: flex;
     justify-content: space-around;
+}
+
+#player02 p{
+    color: white;
 }
 
 #player03 {
